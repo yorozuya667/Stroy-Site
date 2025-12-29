@@ -1,3 +1,5 @@
+const WHATSAPP_NUMBER = "77715408808";
+
 async function loadProducts() {
   const res = await fetch("data/products.json");
   if (!res.ok) throw new Error("Не удалось загрузить каталог");
@@ -31,7 +33,7 @@ function render(products) {
   for (const p of products) {
     const priceText = p.price == null ? "Цена по запросу" : `${p.price} ₸`;
     const waText = encodeURIComponent(`Здравствуйте! Интересует: ${p.name}. Можно цену и сроки?`);
-    const waLink = `https://wa.me/77770000000?text=${waText}`; // TODO: свой номер
+    const waLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${waText}`;
 
     const col = document.createElement("div");
     col.className = "col-12 col-md-6 col-lg-4";
@@ -67,16 +69,25 @@ function applyFilters(all) {
   render(filtered);
 }
 
-(async function main() {
-  const products = await loadProducts();
-  buildCategoryOptions(products);
-  render(products);
+function attachError(message) {
+  const grid = document.getElementById("catalog");
+  grid.innerHTML = `<div class="col"><div class="alert alert-danger mb-0">${message}</div></div>`;
+}
 
-  document.getElementById("search").addEventListener("input", () => applyFilters(products));
-  document.getElementById("category").addEventListener("change", () => applyFilters(products));
-  document.getElementById("reset").addEventListener("click", () => {
-    document.getElementById("search").value = "";
-    document.getElementById("category").value = "";
+(async function main() {
+  try {
+    const products = await loadProducts();
+    buildCategoryOptions(products);
     render(products);
-  });
+
+    document.getElementById("search").addEventListener("input", () => applyFilters(products));
+    document.getElementById("category").addEventListener("change", () => applyFilters(products));
+    document.getElementById("reset").addEventListener("click", () => {
+      document.getElementById("search").value = "";
+      document.getElementById("category").value = "";
+      render(products);
+    });
+  } catch (err) {
+    attachError(err.message || "Ошибка загрузки каталога");
+  }
 })();
