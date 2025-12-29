@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Название компании — строительные материалы и оборудование</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Поставки строительных материалов и оборудования для юрлиц и ИП. Доставка на объект, счета-фактуры, работа по безналу.">
+
+    <!-- Bootstrap с CDN, чтобы не мучиться со стилями -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #1f2933, #111827);
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .hero p.lead {
+            font-size: 1.2rem;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 0.03em;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+        }
+
+        footer {
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Навбар -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <!-- TODO: тут поменяй на название своей компании -->
+        <a class="navbar-brand" href="#hero">СТРОЙКОМПАНИЯ</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">О компании</a></li>
+                <li class="nav-item"><a class="nav-link" href="#materials">Материалы</a></li>
+                <li class="nav-item"><a class="nav-link" href="#equipment">Оборудование</a></li>
+                <li class="nav-item"><a class="nav-link" href="#why-us">Почему мы</a></li>
+                <li class="nav-item"><a class="nav-link" href="#how-work">Как мы работаем</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contacts">Контакты</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="mt-5 pt-4">
+
+    <!-- Первый экран -->
+    <section id="hero" class="hero hero-bg section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <!-- TODO: тут поменяй текст под себя -->
+                    <h1 class="mb-3">Строительные материалы и оборудование для ваших объектов</h1>
+                    <p class="lead mb-4">
+                        Поставляем строительные материалы и технику для подрядчиков, застройщиков и ИП.
+                        Работаем по безналу, выставляем счета и закрывающие документы.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2">
+                        <a href="tel:+77770000000" class="btn btn-primary btn-lg">
+                            Позвонить
+                        </a>
+                        <a href="https://wa.me/77770000000" class="btn btn-outline-light btn-lg" target="_blank">
+                            Написать в WhatsApp
+                        </a>
+                    </div>
+                    <p class="mt-3 mb-0">
+                        <small>Работаем по городу и области. Индивидуальные условия для постоянных клиентов.</small>
+                    </p>
+                </div>
+                <div class="col-lg-5 mt-4 mt-lg-0">
+                    <div class="card bg-dark border-0 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Быстрый запрос</h5>
+                            <p class="mb-3">Позвоните нам или отправьте заявку в мессенджер — подберём материалы и технику под ваш объект.</p>
+                            <ul class="mb-3">
+                                <li>Цемент, смеси, блоки</li>
+                                <li>Арматура и металлопрокат</li>
+                                <li>Краны, спецтехника и оборудование</li>
+                            </ul>
+                            <p class="mb-0"><small>Без сложных форм — просто связь с живым менеджером.</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О компании -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="h3">О компании</h2>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-lg-7">
+                    <!-- TODO: здесь текст о вас -->
+                    <p>
+                        Мы занимаемся поставкой строительных материалов и оборудования для объектов
+                        любого масштаба — от частного строительства до крупных проектов.
+                    </p>
+                    <p>
+                        Работаем с проверенными поставщиками и понимаем специфику стройки:
+                        сроки, логистика, документация, согласования.
+                    </p>
+                </div>
+                <div class="col-lg-5">
+                    <div class="bg-light p-3 p-lg-4 rounded">
+                        <h6 class="text-uppercase text-muted">Коротко о главном</h6>
+                        <ul class="mb-0">
+                            <li>Работа с юрлицами и ИП</li>
+                            <li>Счета, акты и ЭСФ (по необходимости)</li>
+                            <li>Доставка на объект или самовывоз</li>
+                            <li>Подбор аналогов по бюджету</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Материалы -->
+    <section id="materials" class="section-padding bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="h3">Строительные материалы</h2>
+                    <p class="text-muted mb-0">Список примерный — точный ассортимент можно будет дополнять.</p>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5>Сыпучие материалы</h5>
+                    <ul class="mb-0">
+                        <li>Цемент</li>
+                        <li>Песок, щебень</li>
+                        <li>Сухие строительные смеси</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Каменные материалы</h5>
+                    <ul class="mb-0">
+                        <li>Кирпич</li>
+                        <li>Блоки (газобетон, пеноблок и др.)</li>
+                        <li>Перемычки и плиты</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Металлопродукция</h5>
+                    <ul class="mb-0">
+                        <li>Арматура</li>
+                        <li>Балка, швеллер, уголок</li>
+                        <li>Сетки и металлоконструкции</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Оборудование -->
+    <section id="equipment" class="section-padding">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="h3">Оборудование и техника</h2>
+                    <p class="text-muted mb-0">Этот блок можно будет уточнять по мере появления техники.</p>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5>Подъёмная техника</h5>
+                    <ul class="mb-0">
+                        <li>Строительные краны</li>
+                        <li>Автовышки</li>
+                        <li>Погрузчики</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Вспомогательное оборудование</h5>
+                    <ul class="mb-0">
+                        <li>Строительные леса</li>
+                        <li>Опалубка</li>
+                        <li>Поддоны, тара</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <div class="bg-light p-3 p-lg-4 rounded h-100">
+                        <h6 class="text-uppercase text-muted">Важно</h6>
+                        <p class="mb-2">
+                            Актуальный перечень техники лучше уточнить по телефону или в мессенджере — парк может меняться.
+                        </p>
+                        <p class="mb-0">
+                            <strong>Телефон:</strong> +7 777 000 00 00<br>
+                            <strong>WhatsApp:</strong> по номеру телефона
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Почему мы -->
+    <section id="why-us" class="section-padding bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="h3">Почему удобно работать с нами</h2>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <div class="h-100">
+                        <div class="feature-icon mb-2">⏱️</div>
+                        <h5>Сроки и логистика</h5>
+                        <p class="mb-0">Понимаем, что стройка стоит дорого. Согласуем сроки и подберём оптимальную доставку.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="h-100">
+                        <div class="feature-icon mb-2">📄</div>
+                        <h5>Документы для бухгалтерии</h5>
+                        <p class="mb-0">Счета, акты, накладные, ЭСФ — работаем официально, без «серых» схем.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="h-100">
+                        <div class="feature-icon mb-2">🤝</div>
+                        <h5>Личные условия</h5>
+                        <p class="mb-0">Для постоянных клиентов возможны индивидуальные цены и отсрочка платежа.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Как мы работаем -->
+    <section id="how-work" class="section-padding">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="h3">Как мы работаем</h2>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5>1. Заявка</h5>
+                    <p>Вы звоните или пишете в мессенджер, описываете объект и потребности по материалам и технике.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>2. Подбор и счёт</h5>
+                    <p>Подбираем варианты, уточняем сроки доставки, выставляем счёт и согласуем условия.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>3. Доставка и закрывающие</h5>
+                    <p>Доставляем на объект или готовим к самовывозу, предоставляем все необходимые документы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="section-padding bg-dark text-white">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col">
+                    <h2 class="h3">Контакты</h2>
+                </div>
+            </div>
+            <div class="row gy-4">
+                <div class="col-md-6">
+                    <!-- TODO: тут реальные контакты -->
+                    <p class="mb-2"><strong>Телефон:</strong> <a class="text-white text-decoration-underline" href="tel:+77770000000">+7 777 000 00 00</a></p>
+                    <p class="mb-2"><strong>WhatsApp:</strong> <a class="text-white text-decoration-underline" href="https://wa.me/77770000000" target="_blank">написать в WhatsApp</a></p>
+                    <p class="mb-2"><strong>Email:</strong> info@example.kz</p>
+                    <p class="mb-2"><strong>Адрес:</strong> г. _______, склад/офис ________</p>
+                    <p class="mb-0"><small>Режим работы: Пн–Сб, 9:00–18:00 (пример)</small></p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-2"><strong>Карта / схема проезда</strong></p>
+                    <p class="mb-3">Здесь можно будет вставить карту или ссылку на Google Maps / 2ГИС.</p>
+                    <a href="#" class="btn btn-outline-light btn-sm disabled">Ссылка на карту (заглушка)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="bg-black text-white-50 text-center py-3">
+    <div class="container">
+        <small>© <span id="year"></span> СТРОЙКОМПАНИЯ. Все права защищены.</small>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Подставляем текущий год в подвал
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
